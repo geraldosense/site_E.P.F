@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Escola Profissional do Fundão - Formação profissional de qualidade no coração da Beira Interior">
+    <meta name="keywords" content="Escola Profissional, Fundão, Formação Profissional, Cursos, Educação">
+    
+    <!-- Google OAuth -->
+    <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com">
+    
+    <!-- Google Sign-In API -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://epfundao.pt/">
+    <meta property="og:title" content="Escola Profissional do Fundão">
+    <meta property="og:description" content="Formação profissional de qualidade no coração da Beira Interior">
+    <meta property="og:image" content="https://epfundao.pt/images/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://epfundao.pt/">
+    <meta property="twitter:title" content="Escola Profissional do Fundão">
+    <meta property="twitter:description" content="Formação profissional de qualidade no coração da Beira Interior">
+    <meta property="twitter:image" content="https://epfundao.pt/images/logo.png">
+
+    <title>Escola Profissional do Fundão (E.P.F.)</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-submit-btn">Entrar</button>
+                <div class="google-login">
+                    <div id="g_id_onload"
+                         data-client_id="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+                         data-callback="handleGoogleSignIn">
+                    </div>
+                    <div class="g_id_signin" data-type="standard"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Protected Content Overlay -->
+    <div id="protectedContentOverlay" class="protected-overlay">
+        <div class="overlay-content">
+            <h2>Conteúdo Restrito</h2>
+            <p>Por favor, faça login para acessar este conteúdo.</p>
+            <button id="showLoginBtn" class="cta-button">Fazer Login</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="https://repbse.ipg.pt/storage/2024/07/logo_w-300x106.png" alt="EPF Logo">
+                </a>
+                <div class="school-header">
+
+                </div>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                </ul>
+            </div>
+            <div class="auth-buttons">
+                <a href="#login" class="login-btn">Login</a>
+                <a href="#registro" class="register-btn">Registar</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="led-text">Escola Profissional do Fundão</h1>
+            <p>Formando profissionais para o futuro</p>
+            <a href="#cursos" class="cta-button">Conheça Nossos Cursos</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Seções serão adicionadas aqui -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Escola Profissional do Fundão</h3>
+                <p>Endereço da Escola</p>
+                <p>Telefone: XXX XXX XXX</p>
+                <p>Email: geral@epfundao.pt</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#noticias">Notícias</a></li>
+                    <li><a href="#contactos">Contactos</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/escolaprofissionalfundao" target="_blank" rel="noopener noreferrer" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span class="social-tooltip">Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/epfundao" target="_blank" rel="noopener noreferrer" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span class="social-tooltip">Instagram</span>
+                    </a>
+                    <a href="https://www.linkedin.com/company/escola-profissional-do-fundao" target="_blank" rel="noopener noreferrer" class="social-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span class="social-tooltip">LinkedIn</span>
+                    </a>
+                    <a href="https://twitter.com/epfundao" target="_blank" rel="noopener noreferrer" class="social-icon twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span class="social-tooltip">Twitter</span>
+                    </a>
+                    <a href="https://www.youtube.com/@epfundao" target="_blank" rel="noopener noreferrer" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                        <span class="social-tooltip">YouTube</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Escola Profissional do Fundão. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Authentication state
+        let isAuthenticated = false;
+        const protectedSections = ['#cursos', '#noticias'];
+
+        // DOM Elements
+        const loginModal = document.getElementById('loginModal');
+        const loginForm = document.getElementById('loginForm');
+        const closeModal = document.querySelector('.close-modal');
+        const showLoginBtn = document.getElementById('showLoginBtn');
+        const protectedOverlay = document.getElementById('protectedContentOverlay');
+        const loginBtn = document.querySelector('.login-btn');
+
+        // Show login modal
+        function showLoginModal() {
+            loginModal.style.display = 'block';
+        }
+
+        // Hide login modal
+        function hideLoginModal() {
+            loginModal.style.display = 'none';
+        }
+
+        // Handle login form submission
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                // Here you would typically make an API call to your backend
+                // For demo purposes, we'll use a simple check
+                if (email && password) {
+                    isAuthenticated = true;
+                    hideLoginModal();
+                    updateUIForAuth();
+                    // Store auth state
+                    localStorage.setItem('isAuthenticated', 'true');
+                }
+            } catch (error) {
+                console.error('Login failed:', error);
+                alert('Login falhou. Por favor, tente novamente.');
+            }
+        });
+
+        // Handle Google Sign-In
+        function handleGoogleSignIn(response) {
+            // Here you would typically verify the token with your backend
+            isAuthenticated = true;
+            hideLoginModal();
+            updateUIForAuth();
+            localStorage.setItem('isAuthenticated', 'true');
+        }
+
+        // Update UI based on authentication state
+        function updateUIForAuth() {
+            if (isAuthenticated) {
+                loginBtn.textContent = 'Logout';
+                loginBtn.onclick = handleLogout;
+                protectedOverlay.style.display = 'none';
+                // Show protected content
+                protectedSections.forEach(section => {
+                    const element = document.querySelector(section);
+                    if (element) element.style.display = 'block';
+                });
+            } else {
+                loginBtn.textContent = 'Login';
+                loginBtn.onclick = showLoginModal;
+                protectedOverlay.style.display = 'block';
+                // Hide protected content
+                protectedSections.forEach(section => {
+                    const element = document.querySelector(section);
+                    if (element) element.style.display = 'none';
+                });
+            }
+        }
+
+        // Handle logout
+        function handleLogout() {
+            isAuthenticated = false;
+            localStorage.removeItem('isAuthenticated');
+            updateUIForAuth();
+        }
+
+        // Event Listeners
+        closeModal.onclick = hideLoginModal;
+        showLoginBtn.onclick = showLoginModal;
+        loginBtn.onclick = showLoginModal;
+
+        // Close modal when clicking outside
+        window.onclick = (event) => {
+            if (event.target === loginModal) {
+                hideLoginModal();
+            }
+        };
+
+        // Check authentication state on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedAuth = localStorage.getItem('isAuthenticated');
+            if (savedAuth === 'true') {
+                isAuthenticated = true;
+            }
+            updateUIForAuth();
+        });
+    </script>
+</body>
+</html>
